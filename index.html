@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ino Kopi Roastery</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar start -->
+    <nav class="navbar">
+      <a href="https://www.instagram.com/ino.kopi/" class="navbar-logo"
+        >Ino.Kopi</a
+      >
+
+      <div class="navbar-nav">
+        <a href="#home">Beranda</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart-button"
+          ><i data-feather="shopping-cart"></i
+        ></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+
+      <!-- Search Form -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
+
+      <!-- Shopping Cart  -->
+      <div class="shopping-cart">
+        <div class="cart-item">
+          <img
+            src="data:image/png;base64,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"
+            alt="Product 1"
+          />
+          <div class="item-detail">
+            <h3>Gofood</h3>
+          </div>
+          <a
+            href="https://gofood.co.id/bandar-lampung/restaurant/ino-kopi-p-tirtayasa-53c1b57c-fce7-4695-aef3-aed110db4436"
+          >
+            <i data-feather="external-link" class="remove-item"></i
+          ></a>
+        </div>
+        <div class="cart-item">
+          <img
+            src="data:image/png;base64,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"
+            alt="Product 1"
+          />
+          <div class="item-detail">
+            <h3>Grabfood</h3>
+          </div>
+          <a
+            href="https://food.grab.com/id/id/restaurant/ino-kopi-sukabumi-delivery/6-C2NURJ6BAFWGJX"
+          >
+            <i data-feather="external-link" class="remove-item"></i
+          ></a>
+        </div>
+        <div class="cart-item">
+          <img
+            src="https://storage.googleapis.com/kampusmerdeka_kemdikbud_go_id/mitra/mitra_b18d2e8b-f769-4725-a725-b672399eae72.jpg"
+            alt="Product 1"
+          />
+          <div class="item-detail">
+            <h3>Tokopedia</h3>
+          </div>
+          <a href="https://www.tokopedia.com/inokopi">
+            <i data-feather="external-link" class="remove-item"></i
+          ></a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero  -->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Mari Nikmati Secangkir <span>Ino.Kopi</span></h1>
+        <p>
+          Kami memilih biji kopi terbaik dari kebun kopi terkenal di seluruh
+          dunia dan mengolahnya dengan cermat untuk menghasilkan kopi
+          berkualitas tinggi dengan cita rasa yang khas. Kami memiliki berbagai
+          macam jenis kopi, dari kopi single origin hingga kopi blend yang unik
+          dan eksotis.
+        </p>
+        <a href="#" class="cta">Beli Sekarang</a>
+      </main>
+    </section>
+
+    <!-- About  -->
+    <section id="about" class="about">
+      <h2><span>Tentang</span> Kami</h2>
+
+      <div class="row">
+        <div class="about-img">
+          <img src="img/tentang-kami.jpg" alt="Tentang Kami" />
+        </div>
+        <div class="content">
+          <h3>Kenapa memilih kopi kami?</h3>
+          <p>
+            Kami memilih biji kopi terbaik dari kebun kopi terkenal di seluruh
+            dunia dan mengolahnya dengan cermat untuk menghasilkan kopi
+            berkualitas tinggi dengan cita rasa yang khas. Kami memiliki
+            berbagai macam jenis kopi, dari kopi single origin hingga kopi blend
+            yang unik dan eksotis.
+          </p>
+          <p>
+            Kami juga menyediakan kursus kopi untuk para pecinta kopi yang ingin
+            mempelajari lebih banyak tentang dunia kopi. Dalam kursus ini, Anda
+            akan belajar tentang cara memilih biji kopi yang berkualitas, teknik
+            memanggang biji kopi, dan cara menyeduh kopi yang benar.
+          </p>
+          <p>
+            Selain menawarkan kopi yang lezat, kami juga mengutamakan pengalaman
+            kopi yang menyenangkan. Kami menyediakan lingkungan yang nyaman dan
+            santai untuk menikmati kopi Anda, sehingga Anda dapat merasakan
+            kenikmatan kopi sambil bersantai.
+          </p>
+          <p>
+            Jangan ragu untuk mengunjungi kami di Ino Kopi dan rasakan
+            pengalaman kopi yang tak terlupakan. Kami berharap dapat memberikan
+            Anda kopi terbaik dan pengalaman kopi yang luar biasa setiap kali
+            Anda mengunjungi kami. Terima kasih telah memilih Ino Kopi.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu  -->
+    <section id="menu" class="menu">
+      <h2><span>Menu</span> Kami</h2>
+      <p>
+        Di Ino Kopi, kami menawarkan berbagai macam jenis kopi dengan cita rasa
+        yang khas dan unik. Berikut adalah beberapa menu yang kami sediakan:
+      </p>
+
+      <div class="row">
+        <div class="menu-card">
+          <img
+            src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/67879215-de2c-4665-ad26-0c15cd8b7db9_Go-Biz_20210318_204158.jpeg?auto=format"
+            alt="Espresso"
+            class="menu-card-img"
+            style="width: 50%"
+          />
+          <h3 class="menu-card-title">- Es Kopi Susu Aren -</h3>
+          <p class="menu-card-price">IDR 22K</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/deadf703-9f30-4dff-8deb-5c51bb7d6de9_Go-Biz_20210413_135847.jpeg?auto=format"
+            alt="Espresso"
+            class="menu-card-img"
+            style="width: 50%"
+          />
+          <h3 class="menu-card-title">- Susu Aren -</h3>
+          <p class="menu-card-price">IDR 17K</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/be53234c-6fe5-47d3-8860-f0b139b56482_Go-Biz_20230116_204219.jpeg?auto=format"
+            style="width: 50%"
+            alt="Espresso"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">- Coffee Cream Latte -</h3>
+          <p class="menu-card-price">IDR 22K</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/c519e2d3-31aa-4431-866a-a79b993e3736_Go-Biz_20210318_203551.jpeg?auto=format"
+            alt="Espresso"
+            class="menu-card-img"
+            style="width: 50%"
+          />
+          <h3 class="menu-card-title">- Es Kopi Susu Oreo -</h3>
+          <p class="menu-card-price">IDR 25K</p>
+        </div>
+        <div class="menu-card">
+          <img
+          src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/b99223e0-4fb4-42aa-9031-a821afc4a4cc_Go-Biz_20210413_135541.jpeg?auto=format
+          alt="Espresso" class="menu-card-img" style="width: 50%"/>
+          <h3 class="menu-card-title">- Es Kopi Susu Regal -</h3>
+          <p class="menu-card-price">IDR 25K</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/6b024ac5-4c6c-4034-a928-ab7c0f04e3ef_Go-Biz_20230116_202213.jpeg?auto=format"
+            alt="Espresso"
+            class="menu-card-img"
+            style="width: 50%"
+          />
+          <h3 class="menu-card-title">- Caramel Macchiato -</h3>
+          <p class="menu-card-price">IDR 25K</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section start -->
+    <section id="contact" class="contact">
+      <h2><span>Kontak</span> Kami</h2>
+      <p>
+        Anda dapat menghubungi kami melalui email atau telepon dengan detail
+        kontak berikut:
+      </p>
+      <address>
+        <p>Email: <a href="mailto:info@inokopi.com">info@inokopi.com</a></p>
+        <p>Telepon: <a href="tel:+621234567890">+62 123-456-7890</a></p>
+        <p>Alamat:</p>
+      </address>
+
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15888.49932983348!2d105.3018312!3d-5.3979446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40db882cba9745%3A0x4afa48ccfa5dbcd4!2sIno%20Kopi!5e0!3m2!1sid!2sid!4v1683186736874!5m2!1sid!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="socials">
+        <a href="https://www.instagram.com/ino.kopi/"
+          ><i data-feather="instagram"></i
+        ></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+      </div>
+
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <div class="credit">
+        <p>
+          Created by Ryan-Monica-Tia | &copy;
+          <span id="year"></span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- js -->
+    <script src="js/script.js"></script>
+    <script type="text/javascript">
+      document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+  </body>
+</html>
